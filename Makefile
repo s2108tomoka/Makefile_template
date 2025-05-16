@@ -6,7 +6,7 @@ all	:
 	cc $(FLAGS) $(SRCS)
 do	: all
 	./a.out
-leek	: all
+leak	: all
 	$(LEEK_FLAGS) ./a.out
 check	:
 	cc -fsanitize=address -g $(SRCS)
