@@ -1,6 +1,6 @@
 SRCS = #ここにファイル
 FLAGS = -Wall -Werror -Wextra
-LEAK_FLAGS = valgrind --leak-check=full --leak-check=full --show-leak-kinds=all
+LEAK_FLAGS = valgrind --leak-check=full --show-leak-kinds=all
 
 all	:
 	cc $(FLAGS) $(SRCS)
