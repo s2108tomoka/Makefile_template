@@ -10,8 +10,6 @@ NAME=ex01
 FILES= \\
 $CPP_FILES
 
-INCLUDES= Zombie.hpp
-
 OBJS=\$(FILES:.cpp=.o)
 
 all: \$(NAME)
@@ -19,7 +17,7 @@ all: \$(NAME)
 \$(NAME): \$(OBJS)
 	\$(CPP) \$(CFLAGS) -o \$(NAME) \$(OBJS)
 
-%.o: %.cpp \$(INCLUDES)
+%.o: %.cpp
 	\$(CPP) \$(CFLAGS) -c \$< -o \$@
 
 clean:
