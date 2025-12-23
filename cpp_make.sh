@@ -4,7 +4,7 @@
 CPP_FILES=$(ls | grep '\.cpp$' | sed 's/$/ \\/')
 
 cat <<EOF > Makefile
-CPP=c++
+CXX=c++
 CFLAGS=-Wall -Wextra -Werror -std=c++98 -pedantic
 NAME=ex01
 FILES= \\
@@ -15,10 +15,10 @@ OBJS=\$(FILES:.cpp=.o)
 all: \$(NAME)
 
 \$(NAME): \$(OBJS)
-	\$(CPP) \$(CFLAGS) -o \$(NAME) \$(OBJS)
+	\$(CXX) \$(CFLAGS) -o \$(NAME) \$(OBJS)
 
 %.o: %.cpp
-	\$(CPP) \$(CFLAGS) -c \$< -o \$@
+	\$(CXX) \$(CFLAGS) -c \$< -o \$@
 
 clean:
 	\$(RM) \$(OBJS)
